@@ -53,10 +53,11 @@ const Lista_Tareas = () => {
   if (tasks.length !== 0) localStorage.setItem('tasks', JSON.stringify(tasks));
   // // localStorage.clear();
 
-  const addTask = (task) => {
+  const addTask = (task, value) => {
     if (task.text.trim()) {
       task.text = task.text.trim();
-      const tasksUpdates = [...tasks, task]; // agregar al inicio de la lista
+      let tasksUpdates = tasks.filter((t) => t.text !== task.text);
+      tasksUpdates = [...tasksUpdates, task]; // agregar al inicio de la lista
       setTasks(tasksUpdates);
       changeBackgroundImage();
     }
@@ -77,13 +78,9 @@ const Lista_Tareas = () => {
     setTasks(tasksUpdates);
   };
 
-  const editTask = (id) => {
-    const tasksUpdates = tasks.map((task) => {
-      if (tasks.id === id) {
-        task.text = 'hola';
-      }
-      return task;
-    });
+  const editTask = (text) => {
+    document.querySelector('.input__text').value = text;
+    const tasksUpdates = tasks.filter((t) => t.text !== text);
     setTasks(tasksUpdates);
   };
 

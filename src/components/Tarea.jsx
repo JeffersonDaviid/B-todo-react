@@ -24,7 +24,7 @@ const Tarea = ({
       <div className='task__icons'>
         <AiOutlineEdit
           className='task__icons--icon'
-          onClick={() => editTask(id)}
+          onClick={() => editTask(text)}
         />
         <AiOutlineCloseCircle
           className='task__icons--icon'

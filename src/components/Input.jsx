@@ -24,7 +24,7 @@ const Input = (props) => {
       completeTask: false,
     };
 
-    props.onSubmit(newTask);
+    props.onSubmit(newTask, document.querySelector('.input__text').value);
     clearInput();
     // console.log(newTask);
   };
