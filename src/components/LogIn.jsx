@@ -39,7 +39,7 @@ const LogIn = () => {
             type='password'
             className='user-password__input'
             required
-            placeholder='xxxxxxx'
+            placeholder='*******'
           />
         </div>
         <div className='login-actions'>
@@ -50,16 +50,16 @@ const LogIn = () => {
           <p className='forgot-password'>Forgot password</p>
         </div>
         <button className='btn-submit'>Sing in</button>
+        <div className='way-signUp'>
+          <GrGoogle className='way-signUp__google way-signUp__icon' />
+          <FaFacebookF className='way-signUp__facebook way-signUp__icon' />
+          <AiFillApple className='way-signUp__apple way-signUp__icon' />
+        </div>
+        <p className='way-signUp__text'>
+          Don't have an account?{' '}
+          <span className='way-signUp__text--yellow'> Sing Up here</span>
+        </p>
       </form>
-      <div className='way-signUp'>
-        <GrGoogle className='way-signUp__google way-signUp__icon' />
-        <FaFacebookF className='way-signUp__facebook way-signUp__icon' />
-        <AiFillApple className='way-signUp__apple way-signUp__icon' />
-      </div>
-      <p className='way-signUp__text'>
-        Don't have an account?{' '}
-        <span className='way-signUp__text--yellow'> Sing Up here</span>
-      </p>
     </div>
   );
 };
