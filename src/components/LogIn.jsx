@@ -29,7 +29,12 @@ const LogIn = () => {
         <p className='login-user__label'>Username</p>
         <div className='user-email'>
           <AiOutlineMail className='user-email__icon' />
-          <input type='email' className='user-email__input' required />
+          <input
+            type='email'
+            className='user-email__input'
+            required
+            placeholder='example@gmail.com'
+          />
           <AiFillCheckCircle className='user-email__check' />
         </div>
         <p className='login-password__label'>Password</p>
