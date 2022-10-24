@@ -1,0 +1,208 @@
+@use 'variables' as v;
+
+input {
+  outline: none;
+  font-family: sans-serif;
+  border: 0px;
+  background-color: transparent;
+  color: #222;
+  padding: 4px 2px;
+  line-height: auto;
+  width: 100%;
+}
+
+.login {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  top: auto;
+  bottom: auto;
+
+  z-index: 999999;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  //   background-image: linear-gradient(
+  //       109.6deg,
+  //       rgba(48, 207, 208, 1) 11.2%,
+  //       rgba(51, 8, 103, 1) 92.5%
+  //       );
+  background-image: url('https://www.xtrafondos.com/wallpapers/resoluciones/22/auto-en-carretera-con-el-cielo-nocturno-arte-digital_1920x1080_9880.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: v.$font;
+}
+
+.login-user {
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(7px);
+  min-height: min-content;
+  font-family: sans-serif;
+  padding: 75px 10px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px 3px v.$Bacground, 5px 5px 10px 1px v.$Bacground;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+
+  &__logo {
+    padding: 10px;
+    margin: 30px 0;
+  }
+
+  &__img {
+    height: 30px;
+    // width: 100%;
+  }
+  &__text {
+    letter-spacing: 2px;
+    font-family: sans-serif;
+  }
+  &__close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.377);
+    width: 30px;
+    height: 30px;
+  }
+
+  @media (min-width: 320px) {
+    width: 300px;
+  }
+  @media (min-width: 768px) {
+    width: 340px;
+  }
+}
+
+.user-email {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: v.$Bacground-imput;
+  border-radius: 10px;
+  margin-bottom: 10px;
+
+  color: v.$color;
+
+  &__icon,
+  &__check {
+    margin: 6px;
+    height: 20px;
+    width: 20px;
+  }
+
+  //   &__check {
+  //     margin: 6px;
+  //     height: 20px;
+  //     width: 20px;
+  //   }
+}
+
+.user-password {
+  display: flex;
+  align-items: center;
+  background-color: v.$Bacground-imput;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  color: v.$color;
+
+  &__icon {
+    margin: 6px;
+    height: 20px;
+    width: 20px;
+  }
+  &__input {
+    margin-right: 5px;
+    width: 100%;
+  }
+}
+
+.login-user__label,
+.login-password__label {
+  font-family: sans-serif;
+  align-self: flex-start;
+  margin: 3px;
+}
+
+.login-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+
+  @media (min-width: 320px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.remember-user {
+  display: flex;
+  align-items: center;
+  margin: 4px;
+
+  &__icon {
+    cursor: pointer;
+  }
+  &__icon:hover,
+  &__icon--press {
+    cursor: pointer;
+    color: v.$color;
+    background-color: white;
+  }
+  &__text {
+    font-family: sans-serif;
+    margin-left: 5px;
+  }
+}
+
+.forgot-password {
+  font-family: sans-serif;
+}
+
+.btn-submit {
+  font-family: sans-serif;
+  padding: 14px 25px;
+  align-self: center;
+  border: 0px;
+  cursor: pointer;
+  border-radius: 15px;
+  background-color: v.$Bacground;
+  color: v.$font;
+  letter-spacing: 1px;
+  font-weight: 100;
+
+  background-color: #13adcf;
+  background-image: linear-gradient(19deg, #02bde7 0%, #ae00ff 100%);
+}
+
+.way-signUp {
+  margin-top: 20px;
+  &__icon {
+    cursor: pointer;
+    margin: 5px 10px;
+    border-radius: 50%;
+    background-color: v.$font;
+    color: v.$color;
+    height: 25px;
+    width: 25px;
+    padding: 4px;
+    object-fit: cover;
+  }
+
+  &__text {
+    font-family: sans-serif;
+
+    &--yellow {
+      font-family: sans-serif;
+      color: #fae900;
+      cursor: pointer;
+    }
+  }
+}
