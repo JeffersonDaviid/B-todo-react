@@ -1,6 +1,7 @@
 @use 'variables' as v;
 
-input {
+.user-email__input,
+.user-password__input {
   outline: none;
   font-family: sans-serif;
   border: 0px;
@@ -15,13 +16,13 @@ input {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  top: auto;
-  bottom: auto;
 
   z-index: 999999;
   position: absolute;
-  width: 100%;
-  height: 100vh;
+  top: -100vh;
+  left: 0;
+  right: 0;
+  // left: 0;
   //   background-image: linear-gradient(
   //       109.6deg,
   //       rgba(48, 207, 208, 1) 11.2%,
@@ -35,6 +36,12 @@ input {
   color: v.$font;
 
   overflow-y: auto;
+  transition: top 1s ease-in-out;
+  &__show {
+    bottom: 0;
+    top: 0;
+    transition: top 1s ease-in-out;
+  }
 }
 
 .login-user {
@@ -163,11 +170,14 @@ input {
   &__text {
     font-family: sans-serif;
     margin-left: 5px;
+    user-select: none;
   }
 }
 
 .forgot-password {
   font-family: sans-serif;
+  user-select: none;
+  cursor: pointer;
 }
 
 .btn-submit {
@@ -215,6 +225,7 @@ input {
       font-family: sans-serif;
       color: #fae900;
       cursor: pointer;
+      user-select: none;
     }
   }
 }

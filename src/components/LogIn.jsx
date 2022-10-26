@@ -12,10 +12,14 @@ import { GrGoogle } from 'react-icons/gr';
 import { FaFacebookF } from 'react-icons/fa';
 
 const LogIn = () => {
+  const cerrar = () => {
+    document.querySelector('.login').classList.remove('login__show');
+  };
+
   return (
-    <div className='login'>
+    <div className='login login__show'>
       <form className='login-user'>
-        <AiOutlineClose className='login-user__close' />
+        <AiOutlineClose className='login-user__close' onClick={cerrar} />
         <div className='login-user__logo'>
           <img
             src='https://global-uploads.webflow.com/5f84bfe6967b7d35c51b76aa/5f84ce91b8caf04e6bf05e09_Jones-White-Logo.png'
