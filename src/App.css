@@ -9,6 +9,10 @@
   height: 100vh;
 }
 
+.title {
+  cursor: pointer;
+}
+
 .Logo-X {
   font-weight: 200;
 }

@@ -16,12 +16,14 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  justify-content: center;
 
   z-index: 999999;
   position: absolute;
   top: -100vh;
   left: 0;
   right: 0;
+  height: 100vh;
   // left: 0;
   //   background-image: linear-gradient(
   //       109.6deg,
@@ -38,7 +40,6 @@
   overflow-y: auto;
   transition: top 1s ease-in-out;
   &__show {
-    bottom: 0;
     top: 0;
     transition: top 1s ease-in-out;
   }

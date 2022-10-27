@@ -14,11 +14,13 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  justify-content: center;
   z-index: 999999;
   position: absolute;
   top: -100vh;
   left: 0;
   right: 0;
+  height: 100vh;
   background-image: url("https://www.xtrafondos.com/wallpapers/resoluciones/22/auto-en-carretera-con-el-cielo-nocturno-arte-digital_1920x1080_9880.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -29,7 +31,6 @@
   transition: top 1s ease-in-out;
 }
 .login__show {
-  bottom: 0;
   top: 0;
   transition: top 1s ease-in-out;
 }

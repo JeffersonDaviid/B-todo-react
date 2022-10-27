@@ -13,11 +13,12 @@ import { FaFacebookF } from 'react-icons/fa';
 
 const LogIn = () => {
   const cerrar = () => {
-    document.querySelector('.login').classList.remove('login__show');
+    const $login = document.querySelector('.login');
+    $login.classList.remove('login__show');
   };
 
   return (
-    <div className='login login__show'>
+    <div className='login'>
       <form className='login-user'>
         <AiOutlineClose className='login-user__close' onClick={cerrar} />
         <div className='login-user__logo'>
