@@ -17,7 +17,7 @@
   justify-content: center;
   z-index: 999999;
   position: absolute;
-  top: -100vh;
+  top: -1000px;
   left: 0;
   right: 0;
   height: 100vh;
@@ -205,4 +205,4 @@
   user-select: none;
 }
 
-/*# sourceMappingURL=login.css.map */
+/*# sourceMappingURL=logIn.css.map */
